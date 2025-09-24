@@ -1,0 +1,29 @@
+FRESH SINGLE COMMIT (Option B) — exact commands
+# Run these from the project root (the folder that contains index.php)
+# 1) Remove any embedded git history and large node deps (these are present in the zip)
+rm -rf .git
+rm -rf node_modules
+
+# 2) Create recommended .gitignore (we generated one) and ensure .env is ignored
+#    (if you already have a .gitignore, merge in the generated one)
+
+# 3) Initialize git and make a single clean commit
+git init
+git add .
+git commit -m "Initial commit — polished landing page"
+
+# 4) Create GitHub repo and push:
+# Option A: using GitHub CLI (recommended if installed)
+gh repo create your-username/bm-lp-final-2209 --public --source=. --remote=origin --push
+
+# Option B: using GitHub web UI
+# - Create a new repository on github.com (name: bm-lp-final-2209)
+# - Then run:
+git branch -M main
+git remote add origin git@github.com:your-username/bm-lp-final-2209.git
+git push -u origin main
+
+# 5) After pushing, add repository secrets (if you use Actions or deploy):
+#    In GitHub repo -> Settings -> Secrets -> Actions:
+#    Add SMTP_USER, SMTP_PASS, SMTP_HOST, SMTP_PORT, FROM_EMAIL, MAIL_TO (as needed).
+

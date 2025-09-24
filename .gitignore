@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# PHP
+vendor/
+.env
+.env.local
+composer.lock
+phpunit.xml
+.phpunit.result.cache
+
+# Build
+/dist
+/build
+css/output.css
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
